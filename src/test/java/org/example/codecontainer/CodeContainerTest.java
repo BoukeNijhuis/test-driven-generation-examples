@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class CodeContainerTest {
 
     @Test
-    void fileNameExtractionHappyFlow() throws ClassNameNotFoundException {
+    void fileNameExtractionHappyFlow() throws RuntimeException {
         testFileNameExtraction("class HappyFlow{}", "HappyFlow.java");
         testFileNameExtraction("   class HappyFlow{}", "HappyFlow.java");
         testFileNameExtraction("public class HappyFlow{}", "HappyFlow.java");
@@ -22,13 +22,13 @@ class CodeContainerTest {
         // TODO: implement
     }
 
-    private void testFileNameExtraction(String content, String expectedFileName) throws ClassNameNotFoundException {
+    private void testFileNameExtraction(String content, String expectedFileName) throws RuntimeException {
         CodeContainer co = new CodeContainer(content);
         assertEquals(expectedFileName, co.getFileName());
     }
 
     @Test
-    void packageNameExtractionHappyFlow() throws ClassNameNotFoundException {
+    void packageNameExtractionHappyFlow() throws RuntimeException {
         testPackageNameExtraction("package happyflow; class C{}", "happyflow");
         testPackageNameExtraction("   package happyflow; class C{}", "happyflow");
         testPackageNameExtraction("package    happyflow; class C{}", "happyflow");

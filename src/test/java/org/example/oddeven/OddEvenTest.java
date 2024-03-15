@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class OddEvenTest {
 
     @Test
-    public void test() {
+    public void oddEvenTest() {
 
         OddEven oddEven = new OddEven();
         assertTrue(oddEven.isEven(0));
