@@ -3,6 +3,6 @@ package org.example.oddeven;
 public class OddEven {
 
     public boolean isEven(int number) {
-        return number % 2 == 0;
+        return false;
     }
 }
