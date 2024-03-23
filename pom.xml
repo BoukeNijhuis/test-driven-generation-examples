@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
+    <groupId>nl.boukenijhuis</groupId>
     <artifactId>test-driven-generation-examples</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>20</maven.compiler.source>
-        <maven.compiler.target>20</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
@@ -52,6 +52,40 @@
             <version>3.2.3</version>
             <scope>compile</scope>
         </dependency>
+
+        <!-- for debugging -->
+<!--        <dependency>-->
+<!--            <groupId>nl.boukenijhuis</groupId>-->
+<!--            <artifactId>test-driven-generation-maven-plugin</artifactId>-->
+<!--            <version>1.0-SNAPSHOT</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>nl.boukenijhuis</groupId>-->
+<!--            <artifactId>test-driven-generation</artifactId>-->
+<!--            <version>1.0-SNAPSHOT</version>-->
+<!--        </dependency>-->
     </dependencies>
+
+    <build>
+        <!-- run with mvn test-driven-generation:generate -->
+        <plugins>
+            <plugin>
+                <groupId>nl.boukenijhuis</groupId>
+                <artifactId>test-driven-generation-maven-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <configuration>
+                    <server>http://localhost:8080</server>
+                    <testFilePath>/Users/boukenijhuis/git/test-driven-generation-examples/src/test/java/org/example/endpoint/EndpointTest.java</testFilePath>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
