@@ -80,14 +80,16 @@
                 <artifactId>test-driven-generation-maven-plugin</artifactId>
                 <version>1.0-SNAPSHOT</version>
                 <configuration>
-<!--                    <family>ollama</family>-->
+                    <family>ollama</family>
+                    <model>pxlksr/opencodeinterpreter-ds</model>
+<!--                    <timeout>30</timeout>-->
 <!--                    <server>http://localhost:11434</server>-->
-<!--                    <model>codellama</model>-->
 <!--                    <prompt>Do not write a test. Write production code that passes this test: %n%s</prompt>-->
 
 <!--                    <family>chatgpt</family>-->
 <!--                    <model>gpt-4</model>-->
 <!--                    <apiKey>${env.OPENAI_API_KEY}</apiKey>-->
+
                     <testFilePath>
                         /Users/boukenijhuis/git/test-driven-generation-examples/src/test/java/org/example/endpoint/EndpointTest.java
                     </testFilePath>
