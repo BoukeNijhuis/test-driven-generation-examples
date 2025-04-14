@@ -69,7 +69,7 @@
                 <version>1.0-SNAPSHOT</version>
                 <configuration>
                     <testFilePath>
-                        /Users/boukenijhuis/git/test-driven-generation-examples/src/test/java/org/example/endpoint/EndpointTest.java
+                        /Users/boukenijhuis/git/test-driven-generation-examples/src/test/java/org/example/endpoint/SpringBootHelloWorldTest.java
                     </testFilePath>
 
 <!--                    <family>anthropic</family>-->
